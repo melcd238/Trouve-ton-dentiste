@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Header from '../Components/Header/Header';
+import Footer from '../Components/Footer/Footer';
 
-function Layout() {
+const Layout = ({children}) => {
   return (
-    <div>Layout</div>
+    <>
+    <Header/>
+       {children}
+    <Footer/>
+    </>
   )
 }
 
