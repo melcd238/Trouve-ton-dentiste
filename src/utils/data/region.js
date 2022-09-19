@@ -37,8 +37,7 @@ export  const Region = [
     },
     {
         id:"10",
-        nom_reg : "NOUVELLE-AQUITAINE",
-        depts : [{nom_dep:"GIRONDE"},{nom_dep:"PYRENEES-ATLANTIQUES"},{nom_dep:"CHARENTE-MARITIME"},{nom_dep:"LANDES"},{nom_dep:"DORDOGNE"},{nom_dep:"VIENNE"},{nom_dep:"CHARENTE"},{nom_dep:"LOT-ET-GARONNE"},{nom_dep:"HAUTE-VIENNE"},{nom_dep:"DEUX-SEVRES"},{nom_dep:"CORREZE"},{nom_dep:"CREUSE"}]
+        nom_reg : "NOUVELLE-AQUITAINE"
     },
     {
         id:"11",

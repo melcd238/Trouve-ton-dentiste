@@ -1,20 +1,17 @@
-import React, { useState, useEffect} from 'react'
-import { getFilteredDentist } from '../../utils/Api'
+import React, { useState, useEffect} from 'react';
+import styles from './Home.module.css';
+import SearchBar from '../../Components/SearchBar/SearchBar';
+
 
 function Home() {
-  const[filteredDentists, setFilteredDentists] = useState();
 
- /* useEffect(()=>{
-    getFilteredDentist().then((resp)=>{
-       console.log(resp)
-    }).catch((error)=>{
-      console.log(error)
-    })
-
-  },[])*/
 
   return (
-    <main>Home</main>
+    <main>
+      <section className={styles.searchContainer}>
+             <SearchBar/>
+      </section>
+    </main>
   )
 }
 

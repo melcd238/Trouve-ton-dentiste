@@ -25,13 +25,15 @@ code {
 
 }
 header{
-  height:36vh;
+  height:16vh;
   background-color: #355B6D;
   display:flex;
   flex-direction:column;
 }
 main{
   flex-grow:1;
+  dislpay:flex;
+  flex-direction:column;
 }
 nav a{
   color:white;

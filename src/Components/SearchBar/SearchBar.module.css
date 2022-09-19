@@ -32,14 +32,17 @@
 }
 
 .inputWhere{
-   width:200px;
+   width:300px;
    border:none;
-   height:70px;
+   height:72px;
    border-right:3px solid  #355B6D;
-   padding-left: 40px;
-}
-.inputWhere::placeholder{
-    font-family: 'Sanchez', serif;
+   display: flex;
+   justify-content:center;
+   align-items:center;
+   font-size:14px;
+   color:gray; 
+   cursor:pointer;
+   background-color:white;
 }
 
 .searchInputLogo{
@@ -59,12 +62,17 @@
 .inputWhereIcons{
     position: absolute;
     top:28px;
+    right:10px;
+}
+.inputWhereIconsMap{
+    position: absolute;
+    top:28px;
     left:10px;
 }
 .dropDown{
     position: relative;
 }
-.inputRegionVisible{
+.inputRegionVisible , .inputDeptVisible, .inputComVisible {
     position:absolute;
     background-color:white;
     top:62px;
@@ -75,17 +83,17 @@
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
-.inputRegionVisible ul{
+.inputRegionVisible ul, .inputDeptVisible ul ,.inputComVisible ul{
     list-style:none;
     margin:0;
     padding:10px;
 }
-.inputRegionVisible ul li{
+.inputRegionVisible ul li, .inputDeptVisible ul li, .inputComVisible ul li{
     font-family: 'Sanchez', serif;
     font-size:12px;
     margin-top:10px;
     cursor:pointer;
 }
-.inputRegionVisible ul li:hover{
+.inputRegionVisible ul li:hover, .inputDeptVisible ul li:hover, .inputComVisible ul li:hover{
     background-color:gray;
 }
