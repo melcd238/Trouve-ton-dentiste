@@ -1,0 +1,13 @@
+.firstPfooter{
+color: #355B6D;
+font-size:12px; 
+}
+.firstPfooter span{
+ font-family: 'Leckerli One', cursive;
+}
+.secondPfooter{
+font-size:10px;
+color: #355B6D;
+margin-top:-10px;
+font-style:italic;
+}

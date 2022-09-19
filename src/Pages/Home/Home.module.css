@@ -6,3 +6,104 @@
   align-items:center;
   margin:auto;
 }
+.searchInput{
+    width:90%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.inputRegion{
+    width:300px;
+    border:none;
+    height:72px;
+    background-color:white;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+    border-right:3px solid  #355B6D;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-size:14px;
+    color:gray; 
+    cursor:pointer;
+}
+.inputDept{
+    width:300px;
+    border:none;
+    background-color:white;
+    height:72px;
+    border-right:3px solid  #355B6D; 
+    display: flex;
+    justify-content:center;
+    align-items:center; 
+    font-size:14px;
+    color:gray; 
+    cursor:pointer; 
+}
+
+.inputWhere{
+   width:300px;
+   border:none;
+   height:72px;
+   border-right:3px solid  #355B6D;
+   display: flex;
+   justify-content:center;
+   align-items:center;
+   font-size:14px;
+   color:gray; 
+   cursor:pointer;
+   background-color:white;
+}
+
+.searchInputLogo{
+    border:1px solid white;
+    background-color:white;
+    width:140px;
+    height:70px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.inputWhereContainer{
+    position: relative;
+}
+.inputWhereIcons{
+    position: absolute;
+    top:28px;
+    right:10px;
+}
+.inputWhereIconsMap{
+    position: absolute;
+    top:28px;
+    left:10px;
+}
+.dropDown{
+    position: relative;
+}
+.inputRegionVisible , .inputDeptVisible, .inputComVisible {
+    position:absolute;
+    background-color:white;
+    top:62px;
+    width:300px;
+    -webkit-box-shadow: 0.5px 5.5px 8px -3.5px #010101;
+    -moz-box-shadow: 0.5px 5.5px 8px -3.5px #010101;
+    box-shadow: 0.5px 5.5px 8px -3.5px #010101; 
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.inputRegionVisible ul, .inputDeptVisible ul ,.inputComVisible ul{
+    list-style:none;
+    margin:0;
+    padding:10px;
+}
+.inputRegionVisible ul li, .inputDeptVisible ul li, .inputComVisible ul li{
+    font-family: 'Sanchez', serif;
+    font-size:12px;
+    margin-top:10px;
+    cursor:pointer;
+}
+.inputRegionVisible ul li:hover, .inputDeptVisible ul li:hover, .inputComVisible ul li:hover{
+    background-color:gray;
+}
