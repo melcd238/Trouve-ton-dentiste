@@ -1,1 +1,70 @@
-
+.CardDentistContainer{
+    width:100%;
+    border:1px solid #355B6D;
+    border-radius:5px;
+    height:300px;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    -webkit-box-shadow: 0.5px 5.5px 4px -3.5px #010101;
+    -moz-box-shadow: 0.5px 5.5px 4px -3.5px #010101;
+    box-shadow: 0.5px 5.5px 4px -3.5px #010101; 
+}
+.CardDentistContainerAvatar{
+    width:20%;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+.CardDentistAvatar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.CardDentistContainerProfil{
+    width:50%;
+    padding-right:5px;
+}
+.CardDentistContainerProfil h1{
+    font-size:18px;
+    color:  #355B6D;
+}
+.CardDentistContainerProfil h2{
+    font-size:18px;
+    color:  #355B6D;
+    margin-top:-14px;
+}
+.CardDentistContainerProfil h2 span{
+    font-size:14px;
+    color:  #355B6D;
+    font-style:italic;
+}
+.CardDentistContainerProfil p{
+    font-size:14px;
+}
+.CardDentistContainerProfil p span{
+    color: #355B6D;
+}
+.typeActe{
+    color:gray; 
+    font-style:italic;
+}
+.typeActe span{
+    color: #355B6D;
+    font-style:normal;
+}
+.CardDentistSesam{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center; 
+}
+.CardDentistSesam p{
+    font-size:12px;
+}
+.CardDentistContainerGeolocalisation{
+   width:30%;
+   height:100%;
+   border:1px solid green;
+}

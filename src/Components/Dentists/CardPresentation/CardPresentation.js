@@ -5,7 +5,7 @@ import DentistPic from '../../../Assets/dentiste.jpg';
 
 function CardPresentation() {
   return (
-    <div className={styles.CardPresentationContainer}>
+    <>
         <div className={styles.title}>
            <h1>Trouvez le dentiste le plus proche de chez vous</h1>
            <div className={styles.titleDecoration}></div>
@@ -20,7 +20,7 @@ function CardPresentation() {
             Si votre commune n'est pas dans la liste, c'est que malheureusement aucun dentiste n'y exerce. Dans ce cas, regardez les communes autour de chez vous,
             vous pourriez y trouver votre bonheur! </p>
          </div>
-    </div>
+    </>
   )
 }
 
