@@ -1,9 +1,7 @@
 .upHeader{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
-    margin-left:60px;
-    margin-right:200px;
     margin-top:20px;
 }
 .logo{

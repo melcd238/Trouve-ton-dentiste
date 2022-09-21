@@ -56,7 +56,7 @@ const displayAvatar = ()=>{
       </div>
       <div className={styles.CardDentistContainerGeolocalisation} style={{ height: '100%', width: '30%' }} >
       <GoogleMapReact
-        bootstrapURLKeys={{ key:{/*process.env.REACT_APP_GOOGLE_MAPS_KEY */} , libraries: ['visualization']}}
+        bootstrapURLKeys={{ key:process.env.REACT_APP_GOOGLE_MAPS_KEY , libraries: ['visualization']}}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
         onGoogleApiLoaded={({map, maps}) => map.visualization}
