@@ -28,7 +28,9 @@ header{
   height:16vh;
   background-color: #355B6D;
   display:flex;
-  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  
 }
 main{
   flex-grow:1;

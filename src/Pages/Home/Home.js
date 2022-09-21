@@ -10,6 +10,7 @@ import { getFilteredDentist} from '../../utils/Api';
 import CardPresentation from '../../Components/Dentists/CardPresentation/CardPresentation';
 import Logo from '../../Assets/logo.jpg';
 import CardDentiste from '../../Components/Dentists/CardDentiste/CardDentiste';
+import {RotatingLines, ThreeDots  } from "react-loader-spinner"
 
 
 
@@ -24,6 +25,8 @@ const[isOpenRegion, setIsOpenRegion]=useState(false);
 const [isOpenDept, setIsOpenDept]=useState(false);
 const[isOpenCom,setIsOpenCom]=useState(false);
 const [filteredDentists, setFilteredDentists]= useState([]);
+const [loadingCom, setLoadingCom] = useState(false);
+const [loadingDentists, setLoadingDentists] = useState(false);
 
 const styleCrossRegion ={color:"white"}
 
@@ -70,6 +73,7 @@ const getDeptValue = (event)=>{
 }
 const getComValue = (event)=>{
   event.preventDefault();
+  setLoadingDentists(false);
   setInputCommune(event.target.dataset.value)
   setIsOpenCom(false);
 }
@@ -84,6 +88,7 @@ const resetForm = ()=>{
   setDepts([]);
   setCom([]);
   setFilteredDentists([]);
+  setLoadingDentists(false);
 }
 
 useEffect(()=>{
@@ -98,26 +103,32 @@ dropDownDept()
 
 useEffect(()=>{
 if(inputRegion !== "" && inputDept !== ""){
+  setLoadingCom(true);
+  setLoadingDentists(false);
 getCommunes(inputRegion, inputDept).then((resp)=>{
   setCom(resp.facet_groups[9].facets)
+  setLoadingCom(false);
 }).catch((error)=>{
+  setLoadingCom(false);
   console.log(error)
 })
 }
 },[inputRegion,inputDept]);
 
 useEffect(()=>{
-  
+    setLoadingDentists(true);
     getFilteredDentist(inputRegion,inputDept,inputCommune ).then((resp)=>{
       console.log(resp.records)
       const result = resp.records
       setFilteredDentists(result)
+      setLoadingDentists(false);
     }).catch((error)=>{
+      setLoadingDentists(false);
       console.log(error)
     })
 
 
-},[inputRegion,inputDept,inputCommune])
+},[inputCommune])
 
 
 const searchInputs = ()=>{
@@ -165,7 +176,13 @@ const searchInputs = ()=>{
       <div className={styles.inputWhereContainer}>
       <div type="text" className={styles.inputWhere} onClick={()=>toggling("COM")} >{inputCommune !== "" ? `${inputCommune}` : "Selectionnez votre commune"}</div>
       <div className={styles.inputWhereIcons}>{isOpenCom ? <FaChevronCircleUp/> :<FaChevronCircleDown/>}</div>
-       <div className={styles.inputWhereIconsMap} > <FaMapMarkerAlt/> </div>
+       <div className={styles.inputWhereIconsMap} >{loadingCom ? <RotatingLines
+                                     strokeColor="#355B6D"
+                                     strokeWidth="5"
+                                     animationDuration="0.75"
+                                     width="28"
+                                     visible={true}
+                                     />  :<FaMapMarkerAlt/>}</div>
      
        {isOpenCom && !com.length <=0 ?
         <div className={styles.inputComVisible}>
@@ -201,7 +218,22 @@ const searchInputs = ()=>{
       <section className={styles.searchContainer}>
              {searchInputs()}
       </section>
-      {filteredDentists && filteredDentists.length <=0 ?
+      {loadingDentists &&  <div className={styles.CardPresentationContainerLoading}>
+        <div className={styles.CardOverlayLoading}>
+        <ThreeDots 
+             height="260" 
+             width="260" 
+             radius="16"
+             color=" #355B6D" 
+             ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClassName=""
+            visible={true}
+         />
+        </div>
+            <CardPresentation/>  
+         </div>}
+      {filteredDentists && filteredDentists.length <=0 && !loadingDentists ?
          <div className={styles.CardPresentationContainer}>
             <CardPresentation/>  
          </div>

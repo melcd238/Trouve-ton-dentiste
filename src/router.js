@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route} from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Error from './Pages/Error/404';
-import OneDentist from "./Pages/OneDentist/OneDentist";
 import Layout from "./Layout/Layout";
 
 
@@ -14,7 +13,6 @@ function App() {
    <Layout>
     <Routes>
       <Route path="/" element={<Home />}/>  
-      <Route path="dentist/:id" element={<OneDentist/>}/>
       <Route path="*" element={<Error/>} />
     </Routes>
     </Layout>
