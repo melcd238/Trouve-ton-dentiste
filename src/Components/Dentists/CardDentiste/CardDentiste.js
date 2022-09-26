@@ -54,7 +54,7 @@ const displayAvatar = ()=>{
           <p><span>N° de téléphone:</span> {props.tel}</p>
           <p className={styles.typeActe}><span>Types d'actes:</span> {props.type_acte}.</p>
       </div>
-      <div className={styles.CardDentistContainerGeolocalisation} style={{ height: '100%', width: '30%' }} >
+      <div className={styles.CardDentistContainerGeolocalisation} >
       <GoogleMapReact
         bootstrapURLKeys={{ key:process.env.REACT_APP_GOOGLE_MAPS_KEY , libraries: ['visualization']}}
         defaultCenter={defaultProps.center}

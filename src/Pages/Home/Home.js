@@ -175,7 +175,7 @@ const searchInputs = ()=>{
 
       <div className={styles.inputWhereContainer}>
       <div type="text" className={styles.inputWhere} onClick={()=>toggling("COM")} >{inputCommune !== "" ? `${inputCommune}` : "Selectionnez votre commune"}</div>
-      <div className={styles.inputWhereIcons}>{isOpenCom ? <FaChevronCircleUp/> :<FaChevronCircleDown/>}</div>
+      <div className={styles.inputWhereIconsCom}>{isOpenCom ? <FaChevronCircleUp/> :<FaChevronCircleDown/>}</div>
        <div className={styles.inputWhereIconsMap} >{loadingCom ? <RotatingLines
                                      strokeColor="#355B6D"
                                      strokeWidth="5"
@@ -195,15 +195,15 @@ const searchInputs = ()=>{
           
         </ul>
       </div>
+
        : null
       }
+     {inputRegion !== "" && inputDept !== "" && inputCommune !== "" ? 
+       <div className={styles.searchInputLogo}><FaSearch/></div>
+       :
+       <div className={styles.searchInputLogo}><ImCross/></div>
+       }
       </div>
-
-    {inputRegion !== "" && inputDept !== "" && inputCommune !== "" ? 
-    <div className={styles.searchInputLogo}><FaSearch/></div>
-    :
-    <div className={styles.searchInputLogo}><ImCross/></div>
-    }
       
     </div>
   )

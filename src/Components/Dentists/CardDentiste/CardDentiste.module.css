@@ -64,5 +64,42 @@
     font-size:12px;
 }
 .CardDentistContainerGeolocalisation{
-   border:1px solid green;
+   width:30%;
+   height:100%;
+}
+@media only screen and (max-width:1080px){
+    .CardDentistContainer{
+        width:70%;
+        height:800px;
+        margin-bottom:20px;
+        padding-bottom: 20px;
+        flex-direction:column;
+        margin:auto;
+    }
+    .CardDentistContainerAvatar{
+        width:100%;
+        gap:1px;
+    }
+    .CardDentistContainerProfil{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center; 
+        
+    }
+    .typeActe{
+        padding-left:10px;
+    }
+    .CardDentistContainerGeolocalisation{
+       width:100%;
+     }
+    
+}
+@media only screen and (max-width:580px){
+    .CardDentistContainer{
+        width:90%;
+        height:600px;
+    }
+
 }
